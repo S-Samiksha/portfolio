@@ -1,0 +1,60 @@
+/* About.module.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 80vh;
+  background-color: #d2b48c;
+}
+
+.container {
+  display: flex; /* Enables Flexbox layout */
+  gap: 1rem; /* Adds spacing between items */
+  align-items: center; /* Optional: vertically center items within the container */
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 70%; /* Make the card take 70% of the screen */
+  max-width: 1200px; /* Limit the maximum width */
+}
+
+.card h2,
+.card h1 {
+  margin-top: 0;
+  color: #6f4e37; /* Coffee color for headings */
+}
+
+.card p,
+.card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify; /* Justify text in paragraphs and lists */
+}
+
+.awardsList {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0;
+}
+
+.awardsList li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.awardsList li::before {
+  content: "•"; /* Custom bullet */
+  color: #6f4e37; /* Coffee color for the bullet */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
