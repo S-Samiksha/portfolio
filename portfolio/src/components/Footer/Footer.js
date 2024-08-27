@@ -7,9 +7,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <div className={styles.copyright}>
-          &copy; 2024 Samiksha Sankar. All Rights Reserved.
-        </div>
+        <div className={styles.copyright}>&copy; 2024 Samiksha Sankar.</div>
         <div className={styles.iconContainer}>
           <a
             href="https://github.com/S-Samiksha"

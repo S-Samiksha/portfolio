@@ -1,6 +1,4 @@
-/* About.module.css */
 .main {
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
@@ -9,52 +7,88 @@
 }
 
 .container {
-  display: flex; /* Enables Flexbox layout */
-  gap: 1rem; /* Adds spacing between items */
-  align-items: center; /* Optional: vertically center items within the container */
-  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  padding: 2rem;
+  background-color: #d2b48c;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .card {
   background-color: #fff;
-  color: #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 1.5rem;
-  margin: 1rem;
-  width: 70%; /* Make the card take 70% of the screen */
-  max-width: 1200px; /* Limit the maximum width */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card h2,
-.card h1 {
+.card p {
   margin-top: 0;
-  color: #6f4e37; /* Coffee color for headings */
+  color: #333;
 }
 
-.card p,
-.card ul {
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: justify; /* Justify text in paragraphs and lists */
-}
-
-.awardsList {
-  list-style-type: none; /* Remove bullet points */
-  padding-left: 0;
-}
-
-.awardsList li {
-  margin-bottom: 0.5rem;
+.actions {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.awardsList li::before {
-  content: "•"; /* Custom bullet */
-  color: #6f4e37; /* Coffee color for the bullet */
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.5em;
+.githubButton {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.githubIcon {
+  margin-right: 0.5rem;
+  width: 24px;
+}
+
+.expandButton {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.expandButton:hover {
+  background-color: #555;
+}
+
+.markdown {
+  margin-top: 1rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem; /* Adding space at the bottom */
+}
+
+.pageButton {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.pageButton:disabled {
+  background-color: #999;
 }

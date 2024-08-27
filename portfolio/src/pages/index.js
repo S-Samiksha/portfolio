@@ -19,7 +19,8 @@ export default function Home() {
             <h1>Welcome to My Portfolio</h1>
             <p>
               Hi, I'm Samiksha. Sam for Short! :) I love coffee as much as I
-              love coding!
+              love coding! Made this simple portfolio for fun, not much of a
+              front end coder. Took loads of help from ChatGPT. Phew!
             </p>
           </div>
         </div>
