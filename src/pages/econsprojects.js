@@ -1,12 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Modal from "../components/Modal/Modal";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import styles from "../styles/Projects.module.css";
 import { FaGithub } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
 
 // Function to load all projects
 export async function getStaticProps() {
@@ -21,7 +22,6 @@ export async function getStaticProps() {
     return {
       title: data.title || "Untitled Project",
       description: data.description || "No description available.",
-
       markdown: content || "",
       tags: data.tags || [""],
     };
@@ -46,6 +46,8 @@ export default function CSProjects({ projects = [] }) {
     startIndex + projectsPerPage
   );
 
+  const cardRefs = useRef([]);
+
   const handleExpand = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
@@ -57,30 +59,63 @@ export default function CSProjects({ projects = [] }) {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const cards = document.querySelectorAll(`.${styles.card}`);
-      cards.forEach((card) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          } else {
+            entry.target.classList.remove(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    // Reset animations on page change
+    cardRefs.current.forEach((card) => {
+      if (card) {
+        card.classList.remove(styles.visible);
+      }
+    });
+
+    // Initial visibility check
+    cardRefs.current.forEach((card) => {
+      if (card) {
         const rect = card.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           card.classList.add(styles.visible);
         }
+      }
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) {
+          observer.unobserve(card);
+        }
       });
     };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [currentPage]); // Run effect when currentPage changes
 
   return (
     <div>
       <Navbar />
       <main className={styles.main}>
-        <div className={styles.container}>
+        <div className={styles.container} key={currentPage}>
           <div className={styles.grid}>
             {selectedProjects.map((project, index) => (
-              <div key={index} className={styles.card}>
+              <div
+                key={index}
+                className={styles.card}
+                ref={(el) => (cardRefs.current[index] = el)}
+              >
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
 
@@ -122,7 +157,9 @@ export default function CSProjects({ projects = [] }) {
         {isModalOpen && selectedProject && (
           <Modal onClose={closeModal}>
             <h2>{selectedProject.title}</h2>
-
+            <p>
+              <hr className={styles.thickdivider} />
+            </p>
             <ReactMarkdown>{selectedProject.markdown}</ReactMarkdown>
           </Modal>
         )}

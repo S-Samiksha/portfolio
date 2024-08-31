@@ -91,17 +91,19 @@
   padding-left: 1.5rem; /* Indent lists */
   margin: 0;
   color: #333;
+  text-align: justify; /* Justify text alignment */
 }
 
 .modal li {
   font-size: 1rem; /* Font size for list items */
   margin-bottom: 0.5rem; /* Space between list items */
   color: #333;
+  text-align: justify; /* Justify text alignment */
 }
 
 /* Links */
 .modal a {
-  color: #0066cc; /* Blue color for links */
+  color: #9c6e4d; /* Blue color for links */
   text-decoration: none;
 }
 
@@ -117,14 +119,6 @@
   border-left: 4px solid #333; /* Left border for blockquote */
   color: #555;
   font-style: italic; /* Italicize blockquotes */
-}
-.modal a {
-  color: #333;
-  text-decoration: none;
-}
-
-.modal a:hover {
-  text-decoration: underline;
 }
 
 /* Modal Divider Styles */

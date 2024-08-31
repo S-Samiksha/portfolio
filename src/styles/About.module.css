@@ -15,6 +15,17 @@
   flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
   background-color: #fff;
   color: #333;
@@ -24,6 +35,7 @@
   margin: 1rem;
   width: 70%; /* Make the card take 70% of the screen */
   max-width: 1200px; /* Limit the maximum width */
+  animation: fadeInUp 1s ease-out; /* Apply the animation */
 }
 
 .card h2,
@@ -57,4 +69,23 @@
   display: inline-block;
   width: 1em;
   margin-right: 0.5em;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #6f4e37;
+  margin: 1.5rem 0;
+}
+
+.divider {
+  height: 1.5px;
+  background: #a2725067;
+  border: None;
+}
+
+.subDivider {
+  height: 1px;
+  border: None;
+  background: #a2725043;
 }

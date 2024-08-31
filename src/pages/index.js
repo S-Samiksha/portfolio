@@ -18,17 +18,12 @@ export default function Home() {
     <div>
       <Navbar />
       <main className={styles.main}>
-        <motion.div
-          className={styles.card}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
+        <div className={styles.card}>
           <div className={styles.imageContainer}>
             <img
               src={`/portfolio/coffee.png`}
               alt="Cup of Coffee"
-              className={styles.coffeeImage}
+              className={styles.image}
             />
           </div>
           <div className={styles.textContainer}>
@@ -36,12 +31,37 @@ export default function Home() {
             <p>
               Hi, I'm Samiksha. Sam for Short! :) I love coffee as much as I
               love coding! Made this simple portfolio for fun, not much of a
-              front end coder. Took loads of help from ChatGPT. Phew! I have
-              featured my computer science and economics projects under the CS
-              and Econs Tabs. Do have a look!
+              front end coder. Took loads of help from ChatGPT. Phew! Still in
+              Progress... &#128187;
             </p>
           </div>
-        </motion.div>
+        </div>
+
+        <div className={styles.card}>
+          <div className={styles.textContainer}>
+            <h1>Love to Code!</h1>
+            <p>
+              Have featured my CS projects in the Computer Science Projects Tab.
+              Still working on some of write-ups. I also have some Economics
+              Projects, do hope over to the Economics Projects Tab as well
+              &#128526;
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.card}>
+          <div className={styles.textContainer}>
+            <h1>I like swimming too</h1>
+            <p>For leisure, I'm not very fast! &#128517;</p>
+          </div>
+          <div className={styles.imageContainer}>
+            <img
+              src={`/portfolio/swim.png`}
+              alt="Swim"
+              className={styles.image}
+            />
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

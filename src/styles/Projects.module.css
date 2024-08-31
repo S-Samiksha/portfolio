@@ -46,11 +46,13 @@
   position: relative;
   height: 100%;
   opacity: 0; /* Start as invisible */
-  transition: opacity 5s ease; /* Fade-in effect */
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Add transition */
 }
 
 .card.visible {
   opacity: 1; /* Become visible */
+  transform: translateY(0);
 }
 
 .card h2 {
@@ -201,4 +203,14 @@
 .dotteddivider {
   border-top: 1px dotted #6f4e37;
   margin: 1.5rem 0;
+}
+
+.searchBar {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

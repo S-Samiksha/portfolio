@@ -44,13 +44,15 @@
   margin-top: 0;
   color: #6f4e37; /* Coffee color for headings */
   text-align: justify;
+  font-size: 1 rem;
 }
 
 .card p,
 .card ul {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.6;
   text-align: justify; /* Justify text in paragraphs and lists */
+  font-size: 0.9 rem;
 }
 
 .imageContainer {
@@ -58,14 +60,14 @@
 }
 
 .textContainer {
-  flex: 5;
+  flex: 10;
   padding-left: 1rem;
   align-self: center;
 }
 
-.coffeeImage {
+.image {
   width: 100%;
-  max-width: 200px;
+  max-width: 100px;
   border-radius: 8px;
 }
 

@@ -22,9 +22,11 @@ tags:
 
 ## Procedure on how to play Mental Poker
 
-1. Alice shuffles and encrypts a deck of cards, then sends it to Bob E<sub>Alice</sub>(M).
+To see the math, visit the Github Link
+
+1. Alice shuffles and encrypts a deck of cards, then sends it to Bob.
 2. Bob picks five of the ciphertexts (Bob picks a number from 1-52). and identifies these as Amy’s hand and sends them back to Amy. Amy then decrypts them, and she has her hand.
-3. Bob now picks five cards and encrypts them with his own key E<sub>Bob</sub>(E<sub>Alice</sub>(M))= E<sub>Alice</sub>(E<sub>Bob</sub>(M))
-4. He sends them back to Amy. Amy then decrypts the ciphertexts and sends to Bob. E<sub>Bob</sub>(M). Amy cannot find out what bob has as it is encrypted with Bob key.
+3. Bob now picks five cards and encrypts them with his own key
+4. He sends them back to Amy. Amy then decrypts the ciphertexts and sends to Bob. Amy cannot find out what bob has as it is encrypted with Bob key.
 5. Bob then decrypts with his decryption key and he now has his hand.
 6. Both Amy and Bob cross out the number picked by Bob from the list of possible numbers to be picked

@@ -1,1 +1,3 @@
-coffee from narak0rn: https://www.flaticon.com/free-icon/coffee-cup_4553258?term=coffee+cute&page=1&position=1&origin=search&related_id=4553258
+coffee from narak0rn: <a href="https://www.flaticon.com/free-icons/cute" title="cute icons">Cute icons created by narak0rn - Flaticon</a>
+cs from Freepik:<a href="https://www.flaticon.com/free-icons/neural-network" title="neural network icons">Neural network icons created by Freepik - Flaticon</a>
+swim from Freepik:<a href="https://www.flaticon.com/free-icons/swimmer" title="swimmer icons">Swimmer icons created by Freepik - Flaticon</a>
