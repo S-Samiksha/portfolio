@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import AnimatedFront from "../components/AnimatedFront/AnimatedFront"; // Import your AnimatedFront component
 import styles from "../styles/Home.module.css";
+import { basePath } from "../../next.config.mjs";
 import { useState } from "react";
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
         >
           <div className={styles.imageContainer}>
             <img
-              src="/coffee.png"
+              src={`/portfolio/coffee.png`}
               alt="Cup of Coffee"
               className={styles.coffeeImage}
             />
