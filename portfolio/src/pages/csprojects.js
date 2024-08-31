@@ -1,64 +1,45 @@
-import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
-import { FaGithub } from "react-icons/fa";
-import Modal from "../components/Modal/Modal"; // Import the modal component
-import styles from "../styles/Projects.module.css";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { useState, useEffect } from "react";
+import Modal from "../components/Modal/Modal";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import styles from "../styles/Projects.module.css";
+import { FaGithub } from "react-icons/fa";
 
-const projects = [
-  {
-    title: "Project 1",
-    description: "A brief intro to Project 1.",
-    githubLink: "https://github.com/project1",
-    markdown: "# Full details of Project 1\n\nHere are all the details...",
-  },
-  {
-    title: "Project 2",
-    description: "A brief intro to Project 2.",
-    githubLink: "https://github.com/project2",
-    markdown: "# Full details of Project 2\n\nHere are all the details...",
-  },
-  {
-    title: "Project 3",
-    description: "A brief intro to Project 2.",
-    githubLink: "https://github.com/project2",
-    markdown: "# Full details of Project 2\n\nHere are all the details...",
-  },
-  {
-    title: "Project 4",
-    description: "A brief intro to Project 2.",
-    githubLink: "https://github.com/project2",
-    markdown: "# Full details of Project 2\n\nHere are all the details...",
-  },
-  {
-    title: "Project 5",
-    description: "A brief intro to Project 2.",
-    githubLink: "https://github.com/project2",
-    markdown: "# Full details of Project 2\n\nHere are all the details...",
-  },
-  {
-    title: "Project 6",
-    description: "A brief intro to Project 2.",
-    githubLink: "https://github.com/project2",
-    markdown: "# Full details of Project 2\n\nHere are all the details...",
-  },
-  {
-    title: "Project 7",
-    description: "A brief intro to Project 2.",
-    githubLink: "https://github.com/project2",
-    markdown: "# Full details of Project 2\n\nHere are all the details...",
-  },
-  // Add more projects here...
-];
+// Function to load all projects
+export async function getStaticProps() {
+  const postsDirectory = path.join(process.cwd(), "/src/pages/CSPosts/");
+  const filenames = fs.readdirSync(postsDirectory);
 
-export default function Projects() {
-  const [expanded, setExpanded] = useState(null);
+  const projects = filenames.map((filename) => {
+    const filePath = path.join(postsDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const { data, content } = matter(fileContents);
+
+    return {
+      title: data.title || "Untitled Project",
+      description: data.description || "No description available.",
+      githubLink: data.githubLink || "#",
+      markdown: content || "",
+      tags: data.tags || [""],
+    };
+  });
+
+  return {
+    props: {
+      projects,
+    },
+  };
+}
+
+export default function CSProjects({ projects = [] }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projectsPerPage = 6;
+  const projectsPerPage = 9;
   const startIndex = (currentPage - 1) * projectsPerPage;
   const selectedProjects = projects.slice(
     startIndex,
@@ -75,6 +56,23 @@ export default function Projects() {
     setSelectedProject(null);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const cards = document.querySelectorAll(`.${styles.card}`);
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          card.classList.add(styles.visible);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -85,15 +83,24 @@ export default function Projects() {
               <div key={index} className={styles.card}>
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
+
+                <div className={styles.tags}>
+                  {project.tags.map((tag, index) => (
+                    <span key={index} className={styles.tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                 <div className={styles.actions}>
                   <a
                     href={project.githubLink}
-                    className={styles.footerIcon}
+                    className={styles.githubIcon}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub />
                   </a>
+
                   <button
                     onClick={() => handleExpand(project)}
                     className={styles.expandButton}
@@ -124,15 +131,16 @@ export default function Projects() {
         {isModalOpen && selectedProject && (
           <Modal onClose={closeModal}>
             <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            <a
-              href={selectedProject.githubLink}
-              className={styles.footerIcon}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub /> GitHub Link
-            </a>
+            <p>
+              For full details:{" "}
+              <a
+                href={selectedProject.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+            </p>
             <ReactMarkdown>{selectedProject.markdown}</ReactMarkdown>
           </Modal>
         )}

@@ -15,6 +15,17 @@
   flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
   display: flex;
   background-color: #fff;
@@ -25,6 +36,7 @@
   margin: 1rem;
   width: 70%; /* Make the card take 70% of the screen */
   max-width: 1200px; /* Limit the maximum width */
+  animation: fadeInUp 1s ease-out; /* Apply the animation */
 }
 
 .card h2,

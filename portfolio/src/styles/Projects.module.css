@@ -11,10 +11,29 @@
   background-color: #d2b48c;
 }
 
+/* To make the grid dynamic */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* Default for small screens */
+  gap: 3rem;
+}
+
+@media (min-width: 100px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns for small tablets */
+  }
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns for tablets */
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 4 columns for desktops */
+  }
 }
 
 .card {
@@ -22,6 +41,26 @@
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 5s ease; /* Fade-in effect */
+}
+
+.card.visible {
+  opacity: 1; /* Become visible */
+}
+
+.card h2 {
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  text-align: justify;
+  flex: 1;
 }
 
 .card h2,
@@ -31,15 +70,17 @@
 }
 
 .actions {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .githubButton {
   display: flex;
   align-items: center;
-  background-color: #333;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -49,6 +90,14 @@
 .githubIcon {
   margin-right: 0.5rem;
   width: 24px;
+  color: #000000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.githubIcon:hover {
+  color: #6f4e37;
 }
 
 .expandButton {
@@ -58,6 +107,9 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .expandButton:hover {
@@ -72,11 +124,15 @@
   overflow: hidden;
 }
 
+.markdown h1 {
+  font-size: 1 rem;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  margin-bottom: 2rem; /* Adding space at the bottom */
+  margin-bottom: 2rem;
 }
 
 .pageButton {
@@ -91,4 +147,58 @@
 
 .pageButton:disabled {
   background-color: #999;
+}
+
+/* Container holding the tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #6f4e37;
+  color: #d2b48c;
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-size: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 600px) {
+  .tag {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+  }
+}
+
+/* Modal Divider Styles */
+.divider {
+  border: none;
+  height: 1px;
+  background: #6f4e37;
+  margin: 1.5rem 0;
+}
+
+.thickdivider {
+  height: 1.5px;
+  background: #6f4e3784;
+}
+
+.dasheddivider {
+  border-top: 1.5px dashed #6f4e37;
+  margin: 1.5rem 0;
+}
+
+.dotteddivider {
+  border-top: 1px dotted #6f4e37;
+  margin: 1.5rem 0;
 }
