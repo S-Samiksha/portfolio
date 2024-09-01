@@ -1,6 +1,6 @@
 ---
-title: "My First Ever SWE Full Stack Project"
-description: "Creating a Website For People to Find Roommates"
+title: "URECA"
+description: "Vulnerability Assessment in Intel SGX"
 githubLink: "https://github.com/S-Samiksha/URECA_Intel_SGX"
 tags: ["Research", "Hardware", "Intel", "Vulnerability Assessment"]
 ---
