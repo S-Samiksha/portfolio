@@ -12,7 +12,7 @@ tags:
 
 ## Story Still in Progress...
 
-## Project Overview
+## Project High-Level Overview
 
 - Utilized Python and STATA to analyse data from Kaggle using econometrics models to determine how the life ladder score (perceived social support as the instrument variable) affected GDP per capita
 
