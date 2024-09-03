@@ -10,7 +10,7 @@
 }
 
 .container {
-  display: flex; /* Enables Flexbox layout */
+  display: inline-flex; /* Enables Flexbox layout */
   justify-content: center;
   flex-direction: column;
   gap: 0.2rem; /* Adds spacing between items */
@@ -36,8 +36,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  margin: 1rem;
-  width: 65%; /* Make the card take 70% of the screen */
+  margin: 0.5rem;
+  width: 90%; /* Make the card take 70% of the screen */
   max-width: 1200px; /* Limit the maximum width */
   animation: fadeInUp 1s ease-out; /* Apply the animation */
 }
@@ -71,7 +71,7 @@
 
 .learningList li {
   margin-left: 1.5rem;
-  display: inline-block;
+  display: flex;
   justify-content: flex-start;
 }
 

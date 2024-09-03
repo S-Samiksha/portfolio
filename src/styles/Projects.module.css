@@ -41,7 +41,7 @@
 
 .card {
   background-color: #fff;
-  padding: 1.2rem;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   align-items: center;
@@ -108,7 +108,7 @@
 .expandButton {
   background-color: #333;
   color: white;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem 1rem;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -149,7 +149,7 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 
 .pageButton:disabled {
