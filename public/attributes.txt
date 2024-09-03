@@ -1,3 +1,4 @@
 coffee from narak0rn: <a href="https://www.flaticon.com/free-icons/cute" title="cute icons">Cute icons created by narak0rn - Flaticon</a>
 cs from Freepik:<a href="https://www.flaticon.com/free-icons/neural-network" title="neural network icons">Neural network icons created by Freepik - Flaticon</a>
 swim from Freepik:<a href="https://www.flaticon.com/free-icons/swimmer" title="swimmer icons">Swimmer icons created by Freepik - Flaticon</a>
+study from Vectorslab:<a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Vectorslab - Flaticon</a>

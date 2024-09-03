@@ -5,6 +5,7 @@ body {
   background-color: #4b2e1d; /* Brunette background color */
   color: #fff; /* Light text color for contrast */
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 h1 {

@@ -45,7 +45,24 @@ export default function Home() {
             </p>
           </div>
         </div>
-
+        <div className={styles.card}>
+          <div className={styles.textContainer}>
+            <h1>Currently, I am Learning..</h1>
+            <ul className={styles.learningList}>
+              <li>Chinese</li>
+              <li>Quantitative Economics</li>
+              <li>Behavioural Economics</li>
+              <li>Mathematics for Economics</li>
+            </ul>
+          </div>
+          <div className={styles.imageContainer}>
+            <img
+              src={`/portfolio/study.png`}
+              alt="study"
+              className={styles.image}
+            />
+          </div>
+        </div>
         <div className={styles.card}>
           <div className={styles.textContainer}>
             <h1>I like swimming too</h1>

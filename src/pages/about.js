@@ -92,6 +92,16 @@ export default function About() {
         </div>
 
         <div className={styles.card}>
+          <h2>Languages</h2>
+          <hr className={styles.divider} />
+          <ul className={styles.awardsList}>
+            <li>Tamil</li>
+            <li>Hindi</li>
+            <li>Chinese (Currently Taking Level 1)</li>
+          </ul>
+        </div>
+
+        <div className={styles.card}>
           <h2>Awards</h2>
           <hr className={styles.divider} />
           <ul className={styles.awardsList}>

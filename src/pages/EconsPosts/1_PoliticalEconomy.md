@@ -7,7 +7,9 @@ tags: ["Politcal Economy", "Elections", "Game Theory"]
 
 ## Essay Overview
 
-Submitted to London School of Economics, Summer School 2023. (Grade A)
+- Submitted to London School of Economics, Summer School 2023. (Grade A)
+
+- The following is the full essay.
 
 ## Introduction
 

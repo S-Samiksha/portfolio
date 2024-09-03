@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: #d2b48c; /* Light coffee background */
 }
 
@@ -39,6 +39,12 @@
   animation: fadeInUp 1s ease-out; /* Apply the animation */
 }
 
+@media (min-width: 900px) {
+  .card {
+    width: 90%;
+  }
+}
+
 .card h2,
 .card h1 {
   margin-top: 0;
@@ -53,6 +59,26 @@
   line-height: 1.6;
   text-align: justify; /* Justify text in paragraphs and lists */
   font-size: 0.9 rem;
+}
+
+.learningList {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0;
+  margin-right: 0;
+}
+
+.learningList li {
+  margin-left: 1.5rem;
+  display: inline-block;
+  justify-content: flex-start;
+}
+
+.learningList li::before {
+  content: "•"; /* Custom bullet */
+  color: #6f4e37; /* Coffee color for the bullet */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
 }
 
 .imageContainer {
@@ -74,4 +100,33 @@
 .iconContainer {
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 85%;
+  }
+  .card h2,
+  .card h1 {
+    font-size: 1.1rem;
+  }
+
+  .card h3,
+  .card h4 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .card ul {
+    font-size: 0.8rem;
+  }
+
+  .learningList li {
+    font-size: 0.8rem;
+    display: inline-block;
+    line-height: 1.5;
+  }
 }

@@ -12,9 +12,7 @@ tags: ["Hedonic Model", "Machine Learning", "Housing Prices", "Predictions"]
 
 ## Abstract
 
-In this study, a hedonic pricing model is used to find out if better accessibility to the CBD meant higher prices as suggested by theory. It was found that resale prices increase as the distance between
-HDB and CBD is reduced. While the theory held true generally across Singapore, deviations were found when OLS regressions were done on different regions and flat types. Prices became positively correlated
-with factors such as distance to CBD and/or distance to nearest MRT Stations. This study explores the reasons behind this deviation which is useful for house investors and buyers when purchasing an HDB.
+In this study, a hedonic pricing model is used to find out if better accessibility to the CBD meant higher prices as suggested by theory. It was found that resale prices increase as the distance between HDB and CBD is reduced. While the theory held true generally across Singapore, deviations were found when OLS regressions were done on different regions and flat types. Prices became positively correlated with factors such as distance to CBD and/or distance to nearest MRT Stations. This study explores the reasons behind this deviation which is useful for house investors and buyers when purchasing an HDB.
 
 ## Data Cleaning
 

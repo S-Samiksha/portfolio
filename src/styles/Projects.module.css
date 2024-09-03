@@ -2,7 +2,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: #d2b48c;
 }
 
@@ -165,7 +165,7 @@
   color: #d2b48c;
   padding: 0.2rem;
   border-radius: 5px;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
