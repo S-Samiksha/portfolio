@@ -7,7 +7,10 @@
 }
 
 .container {
-  padding: 2rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
   background-color: #d2b48c;
 }
 
@@ -38,7 +41,7 @@
 
 .card {
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   align-items: center;
@@ -56,11 +59,11 @@
 }
 
 .card h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   text-align: justify;
   flex: 1;
 }
@@ -91,7 +94,7 @@
 
 .githubIcon {
   margin-right: 0.5rem;
-  width: 24px;
+  width: 20px;
   color: #000000;
   position: absolute;
   left: 0;
@@ -105,13 +108,14 @@
 .expandButton {
   background-color: #333;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   position: absolute;
   right: 0;
   bottom: 0;
+  font-size: 0.6rem;
 }
 
 .expandButton:hover {
@@ -133,7 +137,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -145,6 +149,7 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  font-size: 0.5rem;
 }
 
 .pageButton:disabled {
@@ -165,7 +170,7 @@
   color: #d2b48c;
   padding: 0.2rem;
   border-radius: 5px;
-  font-size: 0.7rem;
+  font-size: 0.4rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

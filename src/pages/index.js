@@ -15,65 +15,67 @@ export default function Home() {
     <div>
       <Navbar />
       <main className={styles.main}>
-        <div className={styles.card}>
-          <div className={styles.imageContainer}>
-            <img
-              src={`/portfolio/coffee.png`}
-              alt="Cup of Coffee"
-              className={styles.image}
-            />
+        <div className={styles.container}>
+          <div className={styles.card}>
+            <div className={styles.imageContainer}>
+              <img
+                src={`/portfolio/coffee.png`}
+                alt="Cup of Coffee"
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.textContainer}>
+              <h1>Welcome to My Portfolio</h1>
+              <p>
+                Hi, I'm Samiksha. Sam for Short! :) I love coffee as much as I
+                love coding! Made this simple portfolio for fun and to learn
+                front-end, not much of a front end coder. Took loads of help
+                from ChatGPT. Phew! Still in Progress... &#128187;
+              </p>
+            </div>
           </div>
-          <div className={styles.textContainer}>
-            <h1>Welcome to My Portfolio</h1>
-            <p>
-              Hi, I'm Samiksha. Sam for Short! :) I love coffee as much as I
-              love coding! Made this simple portfolio for fun and to learn
-              front-end, not much of a front end coder. Took loads of help from
-              ChatGPT. Phew! Still in Progress... &#128187;
-            </p>
-          </div>
-        </div>
 
-        <div className={styles.card}>
-          <div className={styles.textContainer}>
-            <h1>Love to Code!</h1>
-            <p>
-              Have featured my CS projects in the Computer Science Projects Tab.
-              Still working on some of write-ups. I also have some Economics
-              Projects, do hope over to the Economics Projects Tab as well
-              &#128526;
-            </p>
+          <div className={styles.card}>
+            <div className={styles.textContainer}>
+              <h1>Love to Code!</h1>
+              <p>
+                Have featured my CS projects in the Computer Science Projects
+                Tab. Still working on some of write-ups. I also have some
+                Economics Projects, do hope over to the Economics Projects Tab
+                as well &#128526;
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.textContainer}>
-            <h1>Currently, I am Learning..</h1>
-            <ul className={styles.learningList}>
-              <li>Chinese</li>
-              <li>Quantitative Economics</li>
-              <li>Behavioural Economics</li>
-              <li>Mathematics for Economics</li>
-            </ul>
+          <div className={styles.card}>
+            <div className={styles.textContainer}>
+              <h1>Currently, I am Learning..</h1>
+              <ul className={styles.learningList}>
+                <li>Chinese</li>
+                <li>Quantitative Economics</li>
+                <li>Behavioural Economics</li>
+                <li>Mathematics for Economics</li>
+              </ul>
+            </div>
+            <div className={styles.imageContainer}>
+              <img
+                src={`/portfolio/study.png`}
+                alt="study"
+                className={styles.image}
+              />
+            </div>
           </div>
-          <div className={styles.imageContainer}>
-            <img
-              src={`/portfolio/study.png`}
-              alt="study"
-              className={styles.image}
-            />
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.textContainer}>
-            <h1>I like swimming too</h1>
-            <p>For leisure, I'm not very fast! &#128517;</p>
-          </div>
-          <div className={styles.imageContainer}>
-            <img
-              src={`/portfolio/swim.png`}
-              alt="Swim"
-              className={styles.image}
-            />
+          <div className={styles.card}>
+            <div className={styles.textContainer}>
+              <h1>I like swimming too</h1>
+              <p>For leisure, I'm not very fast! &#128517;</p>
+            </div>
+            <div className={styles.imageContainer}>
+              <img
+                src={`/portfolio/swim.png`}
+                alt="Swim"
+                className={styles.image}
+              />
+            </div>
           </div>
         </div>
       </main>

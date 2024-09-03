@@ -33,7 +33,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   margin: 1rem;
-  width: 70%; /* Make the card take 70% of the screen */
+  width: 65%; /* Make the card take 70% of the screen */
   max-width: 1200px; /* Limit the maximum width */
   animation: fadeInUp 1s ease-out; /* Apply the animation */
 }
@@ -42,17 +42,18 @@
 .card h1 {
   margin-top: 0;
   color: #6f4e37; /* Coffee color for headings */
-  font-size: 1.5rem;
+  font-size: 0.9rem;
+  padding: 0.1rem;
 }
 
 .card h3,
 .card h4 {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 
 .card p,
 .card ul {
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1.6;
   text-align: justify; /* Justify text in paragraphs and lists */
 }
@@ -79,21 +80,15 @@
 
 .divider {
   border: none;
-  height: 1px;
-  background: #6f4e37;
-  margin: 1.5rem 0;
-}
-
-.divider {
-  height: 1.5px;
-  background: #a2725067;
-  border: None;
+  height: 1.7px;
+  background: #a2725087;
+  margin: 0.8rem 0;
 }
 
 .subDivider {
   height: 1px;
   border: None;
-  background: #a2725043;
+  background: #a2725025;
 }
 
 @media (max-width: 768px) {

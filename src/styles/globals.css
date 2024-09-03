@@ -12,11 +12,17 @@ h1 {
   color: #fff; /* White text for better readability */
   text-align: center;
   margin-top: 40px;
-  font-size: 1.3rem;
+  font-size: 1rem;
+}
+
+h2,
+h3,
+h4 {
+  font-size: 0.9rem;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   line-height: 1.6;
   text-align: center;
 }
@@ -29,4 +35,5 @@ ul {
 
 ul li {
   margin: 10px 0;
+  font-size: 0.8rem;
 }

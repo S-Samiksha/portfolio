@@ -4,13 +4,16 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 0.1rem;
   min-height: 100vh;
   background-color: #d2b48c; /* Light coffee background */
 }
 
 .container {
   display: flex; /* Enables Flexbox layout */
-  gap: 1rem; /* Adds spacing between items */
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.2rem; /* Adds spacing between items */
   align-items: center; /* Optional: vertically center items within the container */
   flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
 }
@@ -32,17 +35,11 @@
   color: #333;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 1.5rem;
+  padding: 1rem;
   margin: 1rem;
-  width: 70%; /* Make the card take 70% of the screen */
+  width: 65%; /* Make the card take 70% of the screen */
   max-width: 1200px; /* Limit the maximum width */
   animation: fadeInUp 1s ease-out; /* Apply the animation */
-}
-
-@media (min-width: 900px) {
-  .card {
-    width: 90%;
-  }
 }
 
 .card h2,
@@ -53,18 +50,23 @@
   font-size: 1 rem;
 }
 
+.card h3,
+.card h4 {
+  font-size: 1rem;
+}
+
 .card p,
 .card ul {
-  font-size: 1rem;
   line-height: 1.6;
   text-align: justify; /* Justify text in paragraphs and lists */
-  font-size: 0.9 rem;
+  font-size: 0.5 rem;
 }
 
 .learningList {
   list-style-type: none; /* Remove bullet points */
   padding-left: 0;
   margin-right: 0;
+  font-size: 0.5 rem;
 }
 
 .learningList li {
@@ -89,6 +91,7 @@
   flex: 10;
   padding-left: 1rem;
   align-self: center;
+  font-size: 0.7 rem;
 }
 
 .image {
