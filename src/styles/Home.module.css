@@ -1,135 +1,275 @@
-/* Home.module.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 .main {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  padding: 0.1rem;
-  min-height: 100vh;
-  background-color: #d2b48c; /* Light coffee background */
-}
-
-.container {
-  display: inline-flex; /* Enables Flexbox layout */
-  justify-content: center;
   flex-direction: column;
-  gap: 0.2rem; /* Adds spacing between items */
-  align-items: center; /* Optional: vertically center items within the container */
-  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  padding: 2rem;
+  background-color: #1e1e1e;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card {
-  display: flex;
-  background-color: #fff;
-  color: #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.section {
+  width: 65%;
+  max-width: 1000px;
+  margin-bottom: 1.5rem;
   padding: 1rem;
-  margin: 0.5rem;
-  width: 90%; /* Make the card take 70% of the screen */
-  max-width: 1200px; /* Limit the maximum width */
-  animation: fadeInUp 1s ease-out; /* Apply the animation */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Default off-screen to the left */
+  transition: opacity 2s ease, transform 3s ease; /* Slow down animation */
 }
 
-.card h2,
-.card h1 {
-  margin-top: 0;
-  color: #6f4e37; /* Coffee color for headings */
-  text-align: justify;
-  font-size: 1 rem;
+/* Alternating swipe directions */
+.section:nth-child(odd) {
+  transform: translateX(-100%); /* Off-screen to the left */
 }
 
-.card h3,
-.card h4 {
+.section:nth-child(even) {
+  transform: translateX(100%); /* Off-screen to the right */
+}
+
+.animated .section.inView {
+  opacity: 1; /* Fade in */
+  transform: translateX(0); /* Slide into view */
+}
+
+.section.inView {
+  opacity: 1; /* Fade in */
+  transform: translateX(0); /* Slide into view */
+}
+
+.sectionTitle {
+  position: relative;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #6e4b3a;
+  bottom: -10px;
+  left: 0;
+  transform: translateX(0);
+}
+
+.bulletPoints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.bulletPoints li {
+  flex: 1;
+  min-width: 150px;
+  list-style: none;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bulletPointsTwo {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.1rem;
+  align-items: left; /* Use flex-start for left alignment */
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.bulletPointsTwo li {
+  display: inline-block; /* Ensures the background color is contained within the list item */
+  list-style: none;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: rgba(103, 93, 85, 0.285);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.techStackTabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.techStackTab {
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  border: #6e4b3a;
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.techStackTab:hover {
+  color: #6e4b3a; /* Color change on hover */
+}
+
+.stackCategory {
+  flex: 1;
+  min-width: 200px;
+  cursor: pointer; /* Indicate that it's clickable */
+}
+
+.stackCategory.hidden {
+  display: none; /* Hide the category when it's not active */
+}
+
+.stackCategories {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.stackCategoryButton {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
   font-size: 1rem;
 }
 
-.card p,
-.card ul {
-  line-height: 1.6;
-  text-align: justify; /* Justify text in paragraphs and lists */
-  font-size: 0.5 rem;
+.stackCategoryButton.active {
+  background-color: #6e4b3a;
 }
 
-.learningList {
-  list-style-type: none; /* Remove bullet points */
-  padding-left: 0;
-  margin-right: 0;
-  font-size: 0.5 rem;
-}
-
-.learningList li {
-  margin-left: 1.5rem;
+.badgeContainer {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  display: none; /* Hidden by default */
 }
 
-.learningList li::before {
-  content: "•"; /* Custom bullet */
-  color: #6f4e37; /* Coffee color for the bullet */
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
+.badgeContainer.active {
+  display: flex; /* Show when active */
+}
+
+.introContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introContainer img {
+  max-width: 150px;
+  margin-right: 2rem;
+  border-radius: 50%;
 }
 
 .imageContainer {
-  flex: 1;
-}
-
-.textContainer {
-  flex: 10;
-  padding-left: 1rem;
-  align-self: center;
-  font-size: 0.7 rem;
-}
-
-.image {
-  width: 100%;
-  max-width: 100px;
-  border-radius: 8px;
-}
-
-.iconContainer {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  max-width: 80px;
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+
+.divider {
+  border: none;
+  height: 1.2px;
+  background: #5c4b3f87;
+  margin: 0.8rem 0;
+}
+
+.subDivider {
+  height: 1px;
+  border: None;
+  background: #47382d25;
 }
 
 @media (max-width: 768px) {
-  .card {
-    width: 85%;
-  }
-  .card h2,
-  .card h1 {
-    font-size: 1.1rem;
+  .main {
+    padding: 1rem;
   }
 
-  .card h3,
-  .card h4 {
-    font-size: 1rem;
+  .section {
+    padding: 1.5rem;
   }
 
-  .card p {
-    font-size: 0.9rem;
+  .introContainer {
+    flex-direction: column;
   }
 
-  .card ul {
-    font-size: 0.8rem;
+  .introContainer img {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 
-  .learningList li {
-    font-size: 0.8rem;
-    display: inline-block;
-    line-height: 1.5;
+  .bulletPoints {
+    flex-direction: column;
+  }
+
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+
+  .techStackTabs {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    gap: 0.1rem;
+    line-height: 0.1rem;
+  }
+
+  .techStackTab {
+    padding: 0.1rem 0.1rem;
+    color: #fff;
+    font-weight: 350;
+    font-size: 0.7rem;
+  }
+
+  .bulletPointsTwo {
+    display: flex;
+    gap: 0.3rem;
+    padding: 0.25rem;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    flex-wrap: wrap;
+    line-height: 0.5rem;
+  }
+
+  .bulletPointsTwo li {
+    display: inline-block; /* Ensures the background color is contained within the list item */
+    list-style: none;
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background: rgba(103, 93, 85, 0.285);
+    border-radius: 5px;
+    text-align: center;
   }
 }

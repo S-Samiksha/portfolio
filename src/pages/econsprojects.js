@@ -117,6 +117,7 @@ export default function CSProjects({ projects = [] }) {
                 ref={(el) => (cardRefs.current[index] = el)}
               >
                 <h2>{project.title}</h2>
+                <hr className={styles.divider} />
                 <p>{project.description}</p>
 
                 <div className={styles.tags}>

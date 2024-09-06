@@ -1,19 +1,15 @@
 /* Navbar.module.css */
 .navbar {
-  background-color: #6f4e37; /* Coffee color for the navbar */
-  padding: 0.3rem;
+  background-color: #3e3935; /* Coffee color for the navbar */
+  padding: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to navbar */
   position: sticky;
-  top: 10px;
+  top: 0px;
   z-index: 100;
   display: flex; /* Align items horizontally */
   justify-content: space-between; /* Space out logo and menu */
   align-items: center;
   transition: opacity 0.5s ease;
-}
-
-.scrolled {
-  top: 0;
 }
 
 .navList {
@@ -37,15 +33,15 @@
 }
 
 .navItem a:hover {
-  color: #ba845d; /* Hover effect for navbar links */
+  color: #563e2d; /* Hover effect for navbar links */
 }
 
 /* Styles for the menu icon and responsive behavior */
 .menuIcon {
   display: none; /* Hide menu icon by default */
-  font-size: 1.8rem;
-  color: #d5b283;
-  background-color: #6f4e37;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: transparent;
   cursor: pointer;
   border: None;
 }
@@ -56,11 +52,12 @@
     display: none; /* Hide nav list on small screens by default */
     flex-direction: column; /* Stack items vertically */
     width: 100%; /* Full width for the menu */
-    background-color: #6f4e37; /* Background color for the dropdown menu */
+    background-color: #3e3935; /* Background color for the dropdown menu */
     position: absolute;
-    top: 70px; /* Adjust based on your navbar height */
+    top: 30px; /* Adjust based on your navbar height */
+    padding-left: 2rem;
     left: 0;
-    z-index: 101;
+    z-index: 100;
   }
 
   .navList.active {

@@ -1,0 +1,65 @@
+/* Container for the animated entrance */
+.animatedContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+/* Background image setup */
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1.5s ease-in-out; /* Slower slide down */
+}
+
+/* Coffee cup animation */
+.coffeeCup {
+  width: 100px; /* Smaller coffee cup size */
+  height: auto;
+  animation: popUp 1s ease-out forwards; /* Coffee cup pops up */
+}
+
+/* Pop-up animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Fade-out animation */
+.fadeOut {
+  animation: fadeOut 1s ease-out forwards; /* Coffee cup fades out */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Slide down animation */
+.slideDown {
+  transform: translateY(100vh); /* Background slides down */
+  transition: transform 1.5s ease-in-out; /* Slide down transition */
+}
+
+/* Hide the container after the animation */
+.hide {
+  display: none;
+}

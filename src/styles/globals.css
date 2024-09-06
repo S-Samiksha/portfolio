@@ -1,39 +1,60 @@
-/* Updated global.css */
 body {
   margin: 0;
-  font-family: Helvetica, sans-serif;
-  background-color: #4b2e1d; /* Brunette background color */
-  color: #fff; /* Light text color for contrast */
+  font-family: "Helvetica", sans-serif;
+  background-color: #1e1e1e; /* Dark background */
+  color: #e5e5e5; /* Light grey text for contrast */
   overflow-x: hidden;
   min-height: 100vh;
 }
 
-h1 {
-  color: #fff; /* White text for better readability */
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1rem;
-}
-
-h2,
-h3,
-h4 {
+h1,
+h2 {
   font-size: 0.9rem;
+  color: #6e4b3a; /* Dark brown for headers */
 }
 
-p {
+h3 {
+  font-size: 0.85rem;
+}
+
+p,
+ul {
   font-size: 0.8rem;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1.8;
+  text-align: left; /* Left-aligning text */
 }
 
 ul {
   list-style: none;
+  font-size: 0.8rem;
   padding: 0;
-  text-align: center;
 }
 
 ul li {
   margin: 10px 0;
-  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 0.8rem;
+    color: #6e4b3a; /* Dark brown for headers */
+  }
+
+  p,
+  ul {
+    font-size: 0.7rem;
+    line-height: 1.1;
+    text-align: left; /* Left-aligning text */
+  }
+
+  ul {
+    list-style: none;
+    font-size: 0.7rem;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 10px 0;
+  }
 }

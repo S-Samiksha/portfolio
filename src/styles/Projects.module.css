@@ -3,22 +3,22 @@
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
-  background-color: #d2b48c;
+  background-color: #1e1e1e;
 }
 
 .container {
-  padding-top: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   padding-bottom: 2rem;
-  background-color: #d2b48c;
+  background-color: transparent;
 }
 
 /* To make the grid dynamic */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Default for small screens */
-  gap: 3rem;
+  gap: 4.5rem 3rem;
 }
 
 @media (min-width: 100px) {
@@ -40,10 +40,11 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -59,11 +60,12 @@
 }
 
 .card h2 {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
+  color: #6e4b3a;
 }
 
 .card p {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: justify;
   flex: 1;
 }
@@ -71,7 +73,6 @@
 .card h2,
 .card p {
   margin-top: 0;
-  color: #333;
 }
 
 .actions {
@@ -95,7 +96,7 @@
 .githubIcon {
   margin-right: 0.5rem;
   width: 20px;
-  color: #000000;
+  color: #6e4b3a;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -106,7 +107,7 @@
 }
 
 .expandButton {
-  background-color: #333;
+  background-color: #6e4b3a;
   color: white;
   padding: 0.3rem 1rem;
   border-radius: 5px;
@@ -115,7 +116,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
 }
 
 .expandButton:hover {
@@ -142,7 +143,7 @@
 }
 
 .pageButton {
-  background-color: #333;
+  background-color: #6e4b3a;
   color: white;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
@@ -160,17 +161,16 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.1rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .tag {
   display: inline-block;
-  background-color: #6f4e37;
-  color: #d2b48c;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 0.2rem;
   border-radius: 5px;
-  font-size: 0.4rem;
+  font-size: 0.55rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -192,12 +192,13 @@
   border: none;
   height: 1px;
   background: #6f4e37;
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .thickdivider {
   height: 1.5px;
   background: #6f4e3784;
+  border: None;
 }
 
 .dasheddivider {
