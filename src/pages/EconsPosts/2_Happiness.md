@@ -1,6 +1,6 @@
 ---
 title: "Panel Data Analysis"
-description: "Does happiness increase a country’s GDP? "
+description: "Group Project: Does happiness increase a country’s GDP? "
 tags:
   [
     "Time Series Analysis",

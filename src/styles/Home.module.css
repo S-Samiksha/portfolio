@@ -7,7 +7,6 @@
   flex-direction: column;
   padding: 2rem;
   background-color: #1e1e1e;
-  font-family: "Roboto", sans-serif;
   color: #fff;
 }
 
@@ -81,7 +80,8 @@
 }
 
 .bulletPointsTwo {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0.1rem;
   align-items: left; /* Use flex-start for left alignment */
@@ -90,7 +90,34 @@
 }
 
 .bulletPointsTwo li {
-  display: inline-block; /* Ensures the background color is contained within the list item */
+  display: flex; /* Ensures the background color is contained within the list item */
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: rgba(103, 93, 85, 0.285);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Similar to two but centralized*/
+
+.bulletPointsThree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.1rem;
+  align-items: left; /* Use flex-start for left alignment */
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.bulletPointsThree li {
+  display: flex; /* Ensures the background color is contained within the list item */
+  flex-wrap: wrap;
   list-style: none;
   padding: 0.2rem;
   padding-left: 0.5rem;
@@ -191,7 +218,7 @@
 }
 
 .imageContainer img {
-  max-width: 80px;
+  max-width: 70px;
   padding: 0.2rem;
   border-radius: 50%;
 }

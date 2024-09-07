@@ -1,6 +1,6 @@
 ---
-title: "Dutch Auction"
-description: "Building a Dutch Auction on Blockchain and Securing it against Re-Entrancy Attacks"
+title: "Blockchain: Dutch Auction"
+description: "Pair Work: Building a Dutch Auction on Blockchain and Securing it against Re-Entrancy Attacks"
 githubLink: "https://github.com/S-Samiksha/CZ4153_DutchAuction"
 tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat"]
 ---
@@ -15,6 +15,8 @@ tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat"]
 
 - Carry out Re-Entrancy attacks and make the application robust against such attacks
 
+- Successfully fulfilled the project requirements and overcame the challenges
+
 - Write a paper on the potential security issues in LaTeX format. (Full Report not Shown)
 
 ## Project Video
@@ -27,10 +29,7 @@ tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat"]
 2. Implement Dutch auction logic in another contract(s)
 3. Only elapse for 20 minutes, either all tokens get sold out at clearing price no lower than the reserved price, or only part of total token supply get sold with the remaining tokens burned by the auction contract
 4. Be able to distribute the token minted to legitimate bidders at the end of the auction
-5. (bonus) add tests to demonstrate the auction contract is resistant to reentry attack.
-
-- What is reentry attack,
-- hands-on practice on reentry.
+5. (bonus) Add tests to demonstrate the auction contract is resistant to reentry attack.
 
 ## Project Challenges
 

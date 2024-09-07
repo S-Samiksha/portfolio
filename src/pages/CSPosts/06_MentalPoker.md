@@ -1,6 +1,6 @@
 ---
 title: "Applied Cryptography: Mental Poker"
-description: "Developed a game where two dishonest players can play a game of poker fairly using encryption and decryption techniques similar to the RSA algorithm, Adapted from the paper ‘Mental Poker’ published by Adi Shamir, Ronald L. Rivest, and Leonard M. Adleman"
+description: "Pair Work: Developed a game where two dishonest players can play a game of poker fairly using encryption and decryption techniques similar to the RSA algorithm, Adapted from the paper ‘Mental Poker’ published by Adi Shamir, Ronald L. Rivest, and Leonard M. Adleman"
 githubLink: "https://github.com/S-Samiksha/DSAI-Project"
 tags:
   [

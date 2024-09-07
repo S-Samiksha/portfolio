@@ -23,7 +23,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
 
     sections.forEach((section) => {
@@ -62,9 +62,14 @@ export default function Home() {
             </div>
             <div>
               <p>
-                Hi, I'm Samiksha, Sam for short! :) I love coffee and coding,
-                and this portfolio showcases some of my work in both Computer
-                Science and Economics.
+                Hi, I'm Samiksha, Sam for short! :) I am a Final Year Student at
+                Nanyang Technological University, pursuing a double degree in
+                Computer Science and Economics.
+              </p>
+              <p>I specialize in Cybersecurity and Data Science.</p>
+              <p>
+                I love coffee and coding, and this portfolio showcases some of
+                my work in both Computer Science and Economics.
               </p>
             </div>
           </div>
@@ -115,20 +120,20 @@ export default function Home() {
             <p>|</p>
             <button
               className={`${styles.techStackTab} ${
-                activeTab === "Cyber" ? styles.active : ""
-              }`}
-              onClick={() => handleTabClick("Cyber")}
-            >
-              Cyber
-            </button>
-            <p>|</p>
-            <button
-              className={`${styles.techStackTab} ${
                 activeTab === "SWE" ? styles.active : ""
               }`}
               onClick={() => handleTabClick("SWE")}
             >
               SWE
+            </button>
+            <p>|</p>
+            <button
+              className={`${styles.techStackTab} ${
+                activeTab === "Operating Systems" ? styles.active : ""
+              }`}
+              onClick={() => handleTabClick("Operating Systems")}
+            >
+              Operating Systems
             </button>
           </div>
 
@@ -207,20 +212,13 @@ export default function Home() {
               src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white"
               alt="SciPy"
             />
-          </div>
-
-          <div
-            className={`${styles.badgeContainer} ${
-              activeTab === "Cyber" ? styles.active : ""
-            }`}
-          >
             <img
-              src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"
-              alt="Kali Linux"
+              src="https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=anaconda&logoColor=fff"
+              alt="Anaconda"
             />
             <img
-              src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white"
-              alt="Wireshark"
+              src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=fff"
+              alt="Selenium"
             />
           </div>
 
@@ -249,6 +247,11 @@ export default function Home() {
               src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
               alt="Flask"
             />
+
+            <img
+              src="https://img.shields.io/badge/celery-%23a9cc54.svg?style=for-the-badge&logo=celery&logoColor=ddf4a4"
+              alt="Celery"
+            />
           </div>
 
           <div
@@ -264,6 +267,32 @@ export default function Home() {
               src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"
               alt="PyTorch"
             />
+            <img
+              src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000"
+              alt="HuggingFace"
+            />
+            <img
+              src="https://img.shields.io/badge/LangChain-FFD21E?style=for-the-badge&logo=LangChain&color=013741"
+              alt="LangChain"
+            />
+          </div>
+          <div
+            className={`${styles.badgeContainer} ${
+              activeTab === "Operating Systems" ? styles.active : ""
+            }`}
+          >
+            <img
+              src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"
+              alt="Ubuntu"
+            />
+            <img
+              src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"
+              alt="Kali"
+            />
+            <img
+              src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+              alt="Linux"
+            />
           </div>
         </section>
 
@@ -273,7 +302,7 @@ export default function Home() {
           <div>
             <h3>Nanyang Technological University, Singapore</h3>
             <p>
-              <i>Double-Degree, Aug 2020 - Jun 2025</i>
+              <i>Double-Degree </i>, Aug 2020 - Jun 2025
             </p>
             <p>Bachelor of Engineering (Honours) Computer Science </p>
 
@@ -290,16 +319,19 @@ export default function Home() {
             <p>Bachelor of Social Sciences (Honours) Economics</p>
 
             <ul className={styles.bulletPointsTwo}>
-              <li>Mathematics for Economics</li>
-              <li>Quantitative Economics</li>
+              <li>Mathematics for Economics (Current) </li>
+              <li>Quantitative Economics (Current) </li>
+              <li>Behavioural Economics (Current)</li>
               <li>Money and Banking</li>
               <li>Urban Economics</li>
               <li>Health Economics</li>
+              <li>Intermediate Econometrics</li>
+              <li>Microeconomics and Panel Data</li>
             </ul>
             <hr className={styles.divider} />
             <h3>London School of Economics, United Kingdom</h3>
             <p>
-              <i>Summer School, Jun 2023 - Jul 2023</i>
+              <i>Summer School</i>, Jun 2023 - Jul 2023
             </p>
             <p>Modules:</p>
             <ul className={styles.bulletPointsTwo}>
@@ -316,10 +348,7 @@ export default function Home() {
           <div>
             <h3>Backend AI Intern</h3>
             <p>Ensign Infosecurity, May 2024 - Aug 2024</p>
-            <p>
-              Developed and deployed AI-driven applications using FastAPI and
-              AWS EC2.
-            </p>
+            <p>Developed and deployed AI-driven applications</p>
             <hr className={styles.divider} />
             <h3>Part-Time Research Intern</h3>
             <p>
@@ -351,6 +380,35 @@ export default function Home() {
             <hr className={styles.divider} />
             <h3>DSTA Brain Hack: Today I Learned AI (Rank 13th out of 63)</h3>
             <p>Jun 2021</p>
+          </div>
+        </section>
+
+        {/* Languages */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Languages</h2>
+          <div>
+            <ul className={styles.bulletPoints}>
+              <li>Tamil</li>
+              <li>Hindi</li>
+              <li>Chinese (Beginner, Currently Learning)</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Awards */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Achievements</h2>
+          <div>
+            <ul className={styles.bulletPointsThree}>
+              <li>Nanyang Scholarships | 2020-2025</li>
+              <li>SINDA Academic Award | 2020</li>
+              <li>Academic Award at ACS(I) | 2020</li>
+
+              <li>Advanced Science Programme at ACS(I) | 2019</li>
+
+              <li>Wind Ensemble | 2018-2019</li>
+              <li>Debate and Oratorical Society | 2014 - 2017</li>
+            </ul>
           </div>
         </section>
       </main>

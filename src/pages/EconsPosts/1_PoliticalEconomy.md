@@ -1,6 +1,6 @@
 ---
-title: "EC260: The Political Economy of Public Policy"
-description: " Are elections effective mechanisms of political 
+title: "The Political Economy of Public Policy"
+description: "Individual Project: Are elections effective mechanisms of political 
 accountability?"
 tags: ["Politcal Economy", "Elections", "Game Theory"]
 ---

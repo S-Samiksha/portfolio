@@ -1,8 +1,8 @@
 ---
-title: "Mobile App Development: QuitNow"
-description: "Built an application using Flutter and Google Firebase, completing all documentations"
+title: "Mobile App Dev: QuitNow"
+description: "Group Project: Built an application using Flutter and Google Firebase, completing all documentations"
 githubLink: "https://github.com/S-Samiksha/QuitNowApp"
-tags: ["Mobile App Dev", "Flutter", "Firebase"]
+tags: ["Mobile App Dev", "Flutter", "Firebase", "Documentations"]
 ---
 
 ## Project Overview

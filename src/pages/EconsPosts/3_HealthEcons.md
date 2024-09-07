@@ -1,7 +1,7 @@
 ---
 title: "Health Economics: Foreign aid and health outcomes in developing countries "
-description: "Determining whether foreign aid helps in improving infant mortality in 30 developing countries"
-tags: ["Mediation Analysis", "SEM", "Foreign Aid"]
+description: "Group Project: Determining whether foreign aid helps in improving infant mortality in 30 developing countries"
+tags: ["Mediation Analysis", "SEM", "Foreign Aid", "First Difference"]
 ---
 
 ## Project Overview

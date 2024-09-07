@@ -1,8 +1,18 @@
 ---
-title: "Recognizing Images in the Wild"
-description: "A Computer Vision Project to determine kinship given two images using data provided by Kaggle"
+title: "Computer Vision: Recognizing Images in the Wild"
+description: "Group Project: A Computer Vision Project to determine kinship given two images using data provided by Kaggle"
 githubLink: "https://github.com/S-Samiksha/CZ4041_SMILE_LABS"
-tags: ["Computer Vision", "Image Augmentation", "Siamese Network"]
+tags:
+  [
+    "Computer Vision",
+    "Image Augmentation",
+    "Siamese Network",
+    "FaceNet",
+    "ResNet",
+    "Machine Learning",
+    "Python",
+    "Predictions",
+  ]
 ---
 
 ## Project Overview

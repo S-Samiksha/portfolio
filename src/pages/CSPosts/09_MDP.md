@@ -1,8 +1,17 @@
 ---
-title: "Multi Disciplinary Project"
-description: "Building a Robot to Traverse a Maze and Recognize Images"
+title: "Computer Vision and Rpi: Multi Disciplinary Project"
+description: "Group & Individual Components: Building a Robot to Traverse a Maze and Recognize Images"
 githubLink: "https://github.com/S-Samiksha/"
-tags: ["RPi", "Multi-Programming", "Networks", "YOLO", "Image Recognition"]
+tags:
+  [
+    "RPi",
+    "Multi-Programming",
+    "Networks",
+    "YOLO",
+    "Image Recognition",
+    "Computer Vision",
+    "Machine Learning",
+  ]
 ---
 
 ## Project Overview

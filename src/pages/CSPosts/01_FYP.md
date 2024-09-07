@@ -1,9 +1,17 @@
 ---
 title: "Final Year Project"
-description: "Building a Reputation Mechanism for E-Commerce Platforms on Blockchain"
+description: "Individual Project: Building a Reputation Mechanism for E-Commerce Platforms on Blockchain"
 githubLink: "https://github.com/S-Samiksha/Reputation_Mechanism"
 tags:
-  ["Reputation Mechanism", "Solidity", "React", "NextJS", "Python", "HardHat"]
+  [
+    "Reputation Mechanism",
+    "Solidity",
+    "React",
+    "NextJS",
+    "Python",
+    "HardHat",
+    "Applied Mathematics",
+  ]
 ---
 
 ## Project Requirements

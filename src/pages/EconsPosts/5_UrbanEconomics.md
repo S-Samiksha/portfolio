@@ -1,6 +1,6 @@
 ---
 title: "Urban Economics: A hedonic model to determine factors affecting HDB resale prices"
-description: "Automation of Potential Impact Factor "
+description: "Group Project: Automation of Potential Impact Factor "
 tags: ["Hedonic Model", "Machine Learning", "Housing Prices", "Predictions"]
 ---
 

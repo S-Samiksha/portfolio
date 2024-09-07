@@ -1,6 +1,6 @@
 ---
-title: "DSAI Project: Brazillian Olist E-commerce Database"
-description: "Predicting Consumer Satisfaction using Machine Learning."
+title: "Data Science: Brazillian Olist E-commerce Database"
+description: "Group Project: Predicting Consumer Satisfaction using Machine Learning."
 githubLink: "https://github.com/S-Samiksha/DSAI-Project"
 tags:
   [
