@@ -21,6 +21,7 @@ export async function getStaticProps() {
 
     return {
       title: data.title || "Untitled Project",
+      date: data.date || "No Date",
       description: data.description || "No description available.",
       markdown: content || "",
       tags: data.tags || [""],
@@ -119,6 +120,7 @@ export default function CSProjects({ projects = [] }) {
                 <h2>{project.title}</h2>
                 <hr className={styles.divider} />
                 <p>{project.description}</p>
+                <p className={styles.dateText}> {project.date}</p>
 
                 <div className={styles.tags}>
                   {project.tags.map((tag, index) => (

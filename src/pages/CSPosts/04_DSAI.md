@@ -1,5 +1,6 @@
 ---
 title: "Data Science: Brazillian Olist E-commerce Database"
+date: "Mar 2021 – May 2021"
 description: "Group Project: Predicting Consumer Satisfaction using Machine Learning."
 githubLink: "https://github.com/S-Samiksha/DSAI-Project"
 tags:

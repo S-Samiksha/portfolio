@@ -1,5 +1,6 @@
 ---
 title: "Computer Vision: Recognizing Images in the Wild"
+date: "Sep 2023 –  Nov 2023"
 description: "Group Project: A Computer Vision Project to determine kinship given two images using data provided by Kaggle"
 githubLink: "https://github.com/S-Samiksha/CZ4041_SMILE_LABS"
 tags:

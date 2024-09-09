@@ -1,5 +1,6 @@
 ---
 title: "Urban Economics: A hedonic model to determine factors affecting HDB resale prices"
+date: "Jan 2023 – Apr 2023"
 description: "Group Project: Automation of Potential Impact Factor "
 tags: ["Hedonic Model", "Machine Learning", "Housing Prices", "Predictions"]
 ---

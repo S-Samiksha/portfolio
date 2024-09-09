@@ -1,5 +1,6 @@
 ---
 title: "Computer Vision and Rpi: Multi Disciplinary Project"
+date: "Jan 2023 – Mar 2023"
 description: "Group & Individual Components: Building a Robot to Traverse a Maze and Recognize Images"
 githubLink: "https://github.com/S-Samiksha/"
 tags:

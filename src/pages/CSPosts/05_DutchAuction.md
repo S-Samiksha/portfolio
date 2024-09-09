@@ -1,8 +1,9 @@
 ---
 title: "Blockchain: Dutch Auction"
+date: "Sep 2023 - Nov 2023"
 description: "Pair Work: Building a Dutch Auction on Blockchain and Securing it against Re-Entrancy Attacks"
 githubLink: "https://github.com/S-Samiksha/CZ4153_DutchAuction"
-tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat"]
+tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat", "Smart Contracts"]
 ---
 
 ## Introduction
@@ -18,6 +19,13 @@ tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat"]
 - Successfully fulfilled the project requirements and overcame the challenges
 
 - Write a paper on the potential security issues in LaTeX format. (Full Report not Shown)
+
+## Dutch Auction 
+
+Dutch Auctions are used in real platforms like Algorand. 
+
+https://www.algorand.foundation/algo-auction-overview 
+
 
 ## Project Video
 
@@ -38,6 +46,10 @@ tags: ["Dutch Auction", "Solidity", "React", "NextJS", "Blockchain", "HardHat"]
 3. How to "burn" the unsold tokens?
 4. How to enforce successful bidder to pay Ether for the new token, (I.e., they can’t cancel the bid) and how to
    refund bids that are invalid?
+
+## Other Challenges encountered
+
+Solidity has no multi-programming. Dutch Auctions requires the auction to close if the time is up or if the clearing price is reached. This cannot be automatically detected by Solidity and the Smart Contract. There are two solutions - use of ChainLink or a repeated polling of the smart contract. The second method was selected. 
 
 ## Re-Entrancy Attack
 

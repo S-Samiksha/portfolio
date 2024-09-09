@@ -1,5 +1,6 @@
 ---
 title: "The Political Economy of Public Policy"
+date: "Jul 2023"
 description: "Individual Project: Are elections effective mechanisms of political 
 accountability?"
 tags: ["Politcal Economy", "Elections", "Game Theory"]

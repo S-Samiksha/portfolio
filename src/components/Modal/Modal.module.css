@@ -77,11 +77,17 @@
 }
 
 .modal h4 {
-  font-size: 1 rem; /* Smaller than h3 */
+  font-size: 0.6 rem; /* Smaller than h3 */
   margin-top: 0;
+  text-decoration: underline;
   color: #ffffff;
 }
 
+.modal h5 {
+  font-size: 0.6 rem; /* Smaller than h3 */
+  margin-top: 0;
+  color: #ffffff;
+}
 /* Paragraphs */
 .modal p {
   font-size: 0.7rem; /* Standard font size for paragraphs */

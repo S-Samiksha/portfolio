@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Make sure to install react-icons package
 import AnimatedEntrance from "../components/AnimatedEntrance/AnimatedEntrance"; // Import the animated entrance component
 
 export default function Home() {
@@ -71,6 +72,10 @@ export default function Home() {
                 I love coffee and coding, and this portfolio showcases some of
                 my work in both Computer Science and Economics.
               </p>
+              <p>
+                My Hobbies include swimming and reading. Currently, I am reading Ikigai!
+              </p>
+
             </div>
           </div>
         </section>
@@ -401,13 +406,25 @@ export default function Home() {
           <div>
             <ul className={styles.bulletPointsThree}>
               <li>Nanyang Scholarships | 2020-2025</li>
-              <li>SINDA Academic Award | 2020</li>
+              <li>Singapore Indian Development Association (SINDA) Excellence Award | 2020</li>
               <li>Academic Award at ACS(I) | 2020</li>
+              <li>Singapore International Math Olympiad Challenge, Bronze | 2017 </li>
+              <li>International Biomedical Quiz, Theme: Medicine and Immunology, Gold | 2017</li>
+              <li>President for Debate and Oratorical Society | 2017</li>
+            </ul>
+          </div>
+        </section>
 
+         {/* Awards */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Projects | Programmes | CCAs</h2>
+          <div>
+            <ul className={styles.bulletPointsThree}>
+              <li>Undergraduate Research Experience on Campus (URECA) | AY2021/22 </li>
               <li>Advanced Science Programme at ACS(I) | 2019</li>
-
               <li>Wind Ensemble | 2018-2019</li>
               <li>Debate and Oratorical Society | 2014 - 2017</li>
+              
             </ul>
           </div>
         </section>

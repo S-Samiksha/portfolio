@@ -236,6 +236,25 @@
   background: #47382d25;
 }
 
+
+.iconContainer {
+  display: flex;
+  justify-content: right; /* Centers the icons horizontally */
+  align-items: center; /* Centers the icons vertically (optional) */
+}
+
+.icon {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: rgb(152, 113, 82); /* Hover effect for footer icons */
+}
+
+
 @media (max-width: 768px) {
   .main {
     padding: 1rem;

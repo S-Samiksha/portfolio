@@ -1,5 +1,6 @@
 ---
-title: "Health Economics: Foreign aid and health outcomes in developing countries "
+title: "Health Economics: Foreign aid and health outcomes in developing countries"
+date: "Mar 2024 –  Apr 2024"
 description: "Group Project: Determining whether foreign aid helps in improving infant mortality in 30 developing countries"
 tags: ["Mediation Analysis", "SEM", "Foreign Aid", "First Difference"]
 ---

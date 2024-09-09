@@ -1,5 +1,6 @@
 ---
 title: "Software Dev: Java Backend Project"
+date: "Oct 2021 - Nov 2021"
 description: "Group Project: Creating a Restaurant Reservation and PoS System"
 githubLink: "https://github.com/S-Samiksha/Restaurant_Reservation_and_Point_of_Sale_System"
 tags: ["Java", "OODP", "PoS"]

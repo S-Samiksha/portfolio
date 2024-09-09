@@ -1,5 +1,6 @@
 ---
 title: "Research: URECA"
+date: "Aug 2021 – Jun 2022"
 description: "Individual Project: Vulnerability Assessment in Intel SGX"
 githubLink: "https://github.com/S-Samiksha/URECA_Intel_SGX"
 tags: ["Research", "Hardware", "Intel", "Vulnerability Assessment"]
